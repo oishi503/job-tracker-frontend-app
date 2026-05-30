@@ -23,7 +23,7 @@ function Dashboard() {
 
   const fetchApplications = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/applications', { headers });
+      const res = await axios.get('https://job-tracker-backend-q2og.onrender.com/api/applications', { headers });
       setApplications(res.data);
     } catch (err) {
       console.log(err);
@@ -33,7 +33,7 @@ function Dashboard() {
   const handleAdd = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/applications', { company, role, status, notes }, { headers });
+      await axios.post('https://job-tracker-backend-q2og.onrender.com/api/applications', { company, role, status, notes }, { headers });
       setCompany(''); setRole(''); setStatus('Applied'); setNotes('');
       setShowForm(false);
       fetchApplications();
@@ -44,7 +44,7 @@ function Dashboard() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/applications/${id}`, { headers });
+      await axios.delete(`https://job-tracker-backend-q2og.onrender.com/api/applications/${id}`, { headers });
       fetchApplications();
     } catch (err) {
       console.log(err);
@@ -53,7 +53,7 @@ function Dashboard() {
 
   const handleStatusChange = async (id, newStatus) => {
     try {
-      await axios.put(`http://localhost:5000/api/applications/${id}`, { status: newStatus }, { headers });
+      await axios.put(`https://job-tracker-backend-q2og.onrender.com/api/applications/${id}`, { status: newStatus }, { headers });
       fetchApplications();
     } catch (err) {
       console.log(err);
