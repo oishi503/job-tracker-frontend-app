@@ -17,3 +17,9 @@ https://job-tracker-frontend-app-9een.vercel.app
 
 ## Backend
 https://job-tracker-backend-q2og.onrender.com
+
+## Author
+
+**Oishi Bhattacharya**  
+B.Tech CST — Institute of Engineering and Management, Kolkata  
+[GitHub](https://github.com/oishi503)
